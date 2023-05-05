@@ -1,0 +1,30 @@
+// SPDX-License-Identifier: GPL-2.0-only
+
+/dts-v1/;
+
+/include/ "msm8953.dtsi"
+
+/ {
+        qcom,board-id = <0x1000b 1>;
+        qcom,msm-id = <338 0x0>;
+
+        model = "Xiaomi Redmi 5";
+        compatible = "xiaomi,rosy", "qcom,msm8953", "lk2nd,device";
+        lk2nd,pstore = <0x9ff00000 0x100000>;
+
+
+        // Bootloader won't continue if it can't delete some nodes from below
+        soc {
+                #address-cells = <1>;
+                #size-cells = <1>;
+                ranges = <0x0 0x0 0x0 0xffffffff>;
+
+        };
+
+        panel {
+                compatible = "xiaomi,rosy-panel";
+                qcom,mdss_dsi_ft8613_ebbg_5p7_720p_video {
+                        compatible = "xiaomi,ft8613-ebbg";
+                };
+        };
+};
