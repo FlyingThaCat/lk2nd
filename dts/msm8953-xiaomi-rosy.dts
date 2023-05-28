@@ -23,13 +23,13 @@
 	panel {
 		compatible = "xiaomi,rosy-panel";
 
-		qcom,mdss_dsi_ft8006m_boe {
+		qcom,mdss_dsi_ft8006m_boe_5p7_720p_video {
 			compatible = "xiaomi,ft8006m-boe";
 		};
-		qcom,mdss_dsi_ft8613_csot {
+		qcom,mdss_dsi_ft8613_csot_5p7_720p_video {
 			compatible = "xiaomi,ft8613-csot";
 		};
-		qcom,mdss_dsi_ft8613_ebbg {
+		qcom,mdss_dsi_ft8613_ebbg_5p7_720p_video {
 			compatible = "xiaomi,ft8613-ebbg";
 		};
 	};
